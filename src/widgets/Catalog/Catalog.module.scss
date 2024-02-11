@@ -1,0 +1,20 @@
+@import "../../app/variables/variables.module";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: $primary-text-color;
+  padding: 15px 130px;
+  margin-bottom: 38px;
+
+  .title {
+    font-family: $bold-font;
+    font-size: 30px;
+    margin: 34px 0;
+  }
+
+  .wrapper {
+    display: flex;
+    gap: 20px;
+  }
+}

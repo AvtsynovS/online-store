@@ -1,0 +1,54 @@
+@import "../../app/variables/variables.module";
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: $third-background;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    max-width: 280px;
+    max-height: 535px;
+   
+    .question {
+      font-family: $semiBold-font;
+      font-size: 24px;
+      max-width: 160px;
+      margin-bottom: 25px;
+    }
+
+    .subTitle {
+      font-family: $semiBold-font;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .filterList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-family: $semiBold-font;
+      font-size: 14px;
+      padding: 0;
+      margin: 0 0 35px;
+    }
+  
+    .filterItem {
+      font-family: $semiBold-font;
+      font-size: 16px;
+      box-sizing: border-box;
+      text-align: center;
+      list-style-type: none;
+      padding: 22px 5px 10px;
+      border: 0.29px solid $primary-border-color;
+      min-width: 120px;
+    }
+
+    .buttonWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  

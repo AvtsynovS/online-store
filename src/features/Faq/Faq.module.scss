@@ -1,0 +1,21 @@
+@import "../../app/variables/variables.module";
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 281px;
+  box-sizing: border-box;
+  margin-bottom: 80px;
+  
+  .title {
+    font-family: $bold-font;
+    font-size: 30px;
+    margin: 34px 0 8px 0;
+  }
+
+  .accordion {
+    list-style-type: none;
+    padding: 0;
+  }
+}

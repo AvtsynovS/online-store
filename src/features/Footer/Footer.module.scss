@@ -1,0 +1,27 @@
+@import "../../app/variables/variables.module";
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    color: $white-text-color;
+    padding: 15px 130px 30px 130px;
+    background-color: $secondary-background;
+  }
+  
+  .brand {
+    font-family: $bold-font;
+    font-size: 30px;
+  }
+
+  .menu {
+    font-family: $semiBold-font;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    min-width: 654px;
+  }
+
+  .menuItem {
+    list-style-type:  none;
+  }

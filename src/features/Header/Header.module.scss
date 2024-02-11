@@ -1,0 +1,66 @@
+@import "../../app/variables/variables.module";
+
+
+.container {
+    color: $white-text-color;
+    padding: 14px 103px 65px 130px;
+    background-color: $primary-background;
+
+    .menuWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+      .brand {
+        font-family: $bold-font;
+        font-size: 30px;
+      }
+
+      .menu {
+        font-family: $semiBold-font;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        margin-left: 210px;
+        padding: 0;
+        
+        .menuItem {
+          list-style-type:  none;
+          margin-right: 36px;
+        }
+      }
+
+      .wrapper {
+        display: flex;
+        min-width: 100px;
+    
+        .cart {
+          font-family: $semiBold-font;
+          font-size: 14px;
+          margin-right: 40px;
+        }
+    
+        .basket {
+          position: relative;
+
+          .productsCount {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1px;
+            top: 10px;
+            left: 10px;
+            background-color: $accent;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            max-width: 15px;
+            max-height: 15px;
+          }
+        }
+      }
+    }
+  }

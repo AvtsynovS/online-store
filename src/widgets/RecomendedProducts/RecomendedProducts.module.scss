@@ -1,0 +1,56 @@
+@import "../../app/variables/variables.module";
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    color: $primary-text-color;
+    padding: 15px 130px;
+    margin-bottom: 45px;
+
+    .wrapperContent {
+      padding: 40px 100px;
+      background-color: $third-background;
+
+      .title {
+        font-family: $bold-font;
+        font-size: 30px;
+        margin: 0 0 8px;
+      }
+  
+      .subTitle {
+        font-family: $semiBold-font;
+        font-size: 16px;
+        color: $secondary-text-color;
+        margin: 0;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        border-top: 1px solid $secondary-border-color;
+        border-bottom: 1px solid $secondary-border-color;
+        margin-bottom: 20px;
+  
+        .question {
+          font-family: $semiBold-font;
+          font-size: 24px;
+          margin: 22px 0 0 0;
+        }
+  
+        .productsWrapper {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 3px 0 30px 0;
+          gap: 10px 70px;
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }

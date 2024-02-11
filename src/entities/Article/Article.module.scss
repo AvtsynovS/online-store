@@ -1,0 +1,68 @@
+@import "../../app/variables/variables.module";
+
+
+.container {
+    display: flex;
+    width: 100%;
+    max-height: 580px;
+    background-size: cover;
+    background-color: $primary-background;
+    margin-bottom: 45px;
+
+    .bgPattern {
+      position: absolute;
+      min-width: 20vw;
+      min-height: 20vh;
+      background-size: cover;
+      background-image: url(../../assets/bg-pattern.svg);
+    }
+
+    .articlePhoto {
+      position: relative;
+      right: 130px;
+    }
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      margin: 183px 175px 0 135px;
+      min-width: 450px;
+      
+      .title {
+        font-family: $bold-font;
+        color: $white-text-color;
+        font-size: 30px;
+        margin-bottom: 8px;
+      }
+  
+      .paragraph {
+        font-family: $semiBold-font;
+        font-style: 16px;
+        color: $white-text-color;
+        line-height: 140%;
+        max-width: 380px;
+        margin: 0;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: end;
+        align-items: flex-start;
+        margin-top: 20px;
+
+        .hyphen {
+          border-top: 3px solid #fff;
+          min-width: 32px;
+          margin: 25px 20px 0 0;
+        }
+    
+        .signature {
+          font-family: $bold-font;
+          font-style: 20px;
+          color: $white-text-color;
+          text-align: end;
+        }
+      }
+    }
+  }
+  
