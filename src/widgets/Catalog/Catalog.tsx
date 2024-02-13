@@ -1,5 +1,3 @@
-// import logo from "../../assets/hero-bg.jpg";
-// import { Button } from "../../shared";
 import product from "../../assets/photos/product-1.jpg";
 
 import { Product } from "../../entities";
@@ -17,53 +15,13 @@ const filterItems = [
   "sneakers",
 ];
 
-const products = [
+const products = Array(9).fill(
   <Product
     title="Nike Air Force 1 '07 QS"
     img={product}
     price={110}
-  />,
-  <Product
-    title="Nike Air Force 1 '07 QS"
-    img={product}
-    price={110}
-  />,
-  <Product
-    title="Nike Air Force 1 '07 QS"
-    img={product}
-    price={110}
-  />,
-  <Product
-    title="Nike Air Force 1 '07 QS"
-    img={product}
-    price={110}
-  />,
-  <Product
-    title="Nike Air Force 1 '07 QS"
-    img={product}
-    price={110}
-  />,
-  <Product
-    title="Nike Air Force 1 '07 QS"
-    img={product}
-    price={110}
-  />,
-  <Product
-    title="Nike Air Force 1 '07 QS"
-    img={product}
-    price={110}
-  />,
-  <Product
-    title="Nike Air Force 1 '07 QS"
-    img={product}
-    price={110}
-  />,
-  <Product
-    title="Nike Air Force 1 '07 QS"
-    img={product}
-    price={110}
-  />,
-];
+  />
+);
 
 export const Catalog = () => {
   return (

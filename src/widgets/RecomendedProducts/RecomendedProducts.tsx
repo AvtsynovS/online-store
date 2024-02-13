@@ -3,38 +3,13 @@ import { Product } from "../../entities";
 import { Button } from "../../shared";
 import styles from "./RecomendedProducts.module.scss";
 
-const products = [
+const products = Array(6).fill(
   <Product
     title="sneakers"
     img={product}
     checkbox={true}
-  />,
-  <Product
-    title="sneakers"
-    img={product}
-    checkbox={true}
-  />,
-  <Product
-    title="sneakers"
-    img={product}
-    checkbox={true}
-  />,
-  <Product
-    title="sneakers"
-    img={product}
-    checkbox={true}
-  />,
-  <Product
-    title="sneakers"
-    img={product}
-    checkbox={true}
-  />,
-  <Product
-    title="sneakers"
-    img={product}
-    checkbox={true}
-  />,
-];
+  />
+);
 
 export const RecomendedProducts = () => {
   return (
