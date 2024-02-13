@@ -2,7 +2,7 @@
   font-family: 'Jost-Regular';
   font-weight: 400;
   font-display: block;
-  src: url(../../fonts/Jost-Regular.ttf) format('woff2');
+  src: url(../../fonts/Jost-Regular.woff2) format('woff2');
   // src: url(./fonts/Jost-Regular.ttf) format('woff2');
   // TODO переделать шрифты на woff2
 }
@@ -10,13 +10,13 @@
   font-family: 'Jost-SemiBold';
   font-weight: 600;
   font-display: block;
-  src: url(../../fonts/Jost-SemiBold.ttf) format('woff2');
+  src: url(../../fonts/Jost-SemiBold.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Jost-Bold';
   font-weight: 700;
   font-display: block;
-  src: url(../../fonts/Jost-Bold.ttf) format('woff2');
+  src: url(../../fonts/Jost-Bold.woff2) format('woff2');
 }
 
 // Fonts
