@@ -1,0 +1,41 @@
+@import "../../app/variables/variables.module";
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: $white-text-color;
+  background-color: $primary-background;
+  padding: 0 130px 95px;
+  margin-bottom: 5px;
+
+  .article {
+    max-width: 580px;
+
+    .title {
+      font-family: $regular-font;
+      font-size: 36px;
+      line-height: 140%;
+      margin-bottom: 20px;
+    }
+
+    .bgBrand {
+      font-family: $bold-font;
+      position: absolute;
+      font-size: 200px;
+      top: 200px;
+      left: 160px;
+      margin: 0;
+      opacity: 0.12;
+    }
+
+    .paragraph {
+      font-family: $semiBold-font;
+      max-width: 330px;
+      margin: 0;
+      &:last-child {
+        margin-bottom: 35px;
+      }
+    }
+  }
+}

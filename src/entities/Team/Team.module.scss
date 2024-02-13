@@ -1,0 +1,55 @@
+@import "../../app/variables/variables.module";
+
+
+.container {
+    display: flex;
+    width: 100%;
+    background-size: cover;
+    background-color: $primary-background;
+    margin-bottom: 30px;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      z-index: 1;
+      margin-bottom: 140px;
+
+      .title {
+        font-family: $bold-font;
+        color: $white-text-color;
+        font-size: 30px;
+        padding: 0 130px 15px;
+        margin-bottom: 10px;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0 130px;
+
+        .teamPhoto {
+          max-width: 380px;
+          max-height: 400px;
+          &:nth-child(2) {
+            margin-top: 100px;
+          }
+          &:nth-child(4) {
+            margin-top: -100px;
+          }
+          &:nth-child(6) {
+            margin-top: -100px;
+          }
+        }
+      }
+    }
+
+    .bgPattern {
+      position: absolute;
+      left: 75%;
+      background-size: cover;
+      background-image: url(../../assets/bg-pattern-2.svg);
+    }
+  }
+  

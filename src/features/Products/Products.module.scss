@@ -1,0 +1,16 @@
+@import "../../app/variables/variables.module";
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    max-width: 880px;
+
+    .buttonWrapper {
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+  }
+  

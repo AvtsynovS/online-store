@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Jost-Regular';
+  font-weight: 400;
+  font-display: block;
+  src: 
+    url(../../fonts/Jost-Regular.woff2) format("woff2"),
+    url(../../fonts/Jost-Regular.ttf) format("TrueType");
+}
+@font-face {
+  font-family: 'Jost-SemiBold';
+  font-weight: 600;
+  font-display: block;
+  src: 
+    url(../../fonts/Jost-SemiBold.woff2) format('woff2'),
+    url(../../fonts/Jost-SemiBold.ttf) format('TrueType');
+}
+@font-face {
+  font-family: 'Jost-Bold';
+  font-weight: 700;
+  font-display: block;
+  src:
+    url(../../fonts/Jost-Bold.woff2) format('woff2'),
+    url(../../fonts/Jost-Bold.ttf) format('TrueType');
+}
+
+// Fonts
+$regular-font: "Jost-Regular", "Arial", 'Roboto', sans-serif;
+$semiBold-font: "Jost-SemiBold", "Arial", 'Roboto', sans-serif;
+$bold-font: "Jost-Bold", "Arial", 'Roboto', sans-serif;
+
+// Colors
+$primary-background: #484283;
+$secondary-background: #444B58;
+$third-background: #FFF4EE;
+$accent: #F14F4F;
+$primary-text-color: #444B58;
+$secondary-text-color: #808080;
+$third-text-color:  #242424;
+$white-text-color: #fff;
+$primary-border-color: #DBBBA9;
+$secondary-border-color: #808080;
+$secondary-button-color: #444B58;
+$accent-button-color: #F14F4F;

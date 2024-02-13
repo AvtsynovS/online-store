@@ -1,0 +1,57 @@
+@import "../../app/variables/variables.module";
+
+.accordionItem {
+  border-top: 1px solid #242424;
+  border-bottom: 1px solid #242424;
+
+  &:last-child {
+    border-top: none;
+  }
+
+  .faqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 20px 0;
+    font-family: $regular-font;
+    font-size: 20px;
+    color: $third-text-color;
+
+    .accordionHeader {
+      font-family: $regular-font;
+      font-size: 20px;
+      color: $third-text-color;
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      z-index: 1;
+
+      .imgBtn::after{
+        transform: rotate(-20deg);
+      }
+    }
+
+    .active {
+      transform: rotate(45deg);
+    }
+  }
+
+  .accordionCollapse {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+
+    .accordionBody {
+      font-family: $semiBold-font;
+      font-size: 16px;
+      line-height: 140%;
+      color: rgba(36, 36, 36, 0.5);
+      padding-bottom: 35px;
+    }
+  }
+
+  .accordionCollapse.open {
+    height: auto;
+  }
+}

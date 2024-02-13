@@ -1,0 +1,14 @@
+@import "./app//variables/variables.module.scss";
+
+body {
+  margin: 0;
+  // ? Указываем основной шрифт
+  font-family: $regular-font;
+  font-size: 16px;
+  max-width: 1440px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
