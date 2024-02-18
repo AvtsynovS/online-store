@@ -9,13 +9,12 @@ interface IProducts {
 export const Products = ({ products }: IProducts) => {
   return (
     <div className={styles.container}>
-      {products.map((product) => {
-        return product;
-      })}
+      {products.map((product) => product)}
       <div className={styles.buttonWrapper}>
         <Button
           type="accent"
           title="Show more"
+          handlerClick={() => {}}
         />
       </div>
     </div>

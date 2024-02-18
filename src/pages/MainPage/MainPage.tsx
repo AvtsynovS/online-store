@@ -8,16 +8,8 @@ import member5 from "../../assets/photos/member-command-5.jpg";
 import member6 from "../../assets/photos/member-command-6.jpg";
 
 import styles from "./Main.module.scss";
-import { Faq, Footer, Header } from "../../features";
+import { Faq } from "../../features";
 
-const menuItems = [
-  "Catalog",
-  "About us",
-  "Product selection",
-  "Our team",
-  "Shipping and payment",
-  "Contacts",
-];
 const teamPhotos = [member1, member2, member3, member4, member5, member6];
 const faqList = [
   {
@@ -34,17 +26,13 @@ const faqList = [
 
 export const MainPage = () => {
   return (
-    <div className={styles.container}>
-      <Header menuItems={menuItems} />
-      <main>
-        <HeaderArticle />
-        <Catalog />
-        <Article />
-        <RecomendedProducts />
-        <Team teamPhotos={teamPhotos} />
-        <Faq faqList={faqList} />
-      </main>
-      <Footer menuItems={menuItems} />
-    </div>
+    <main className={styles.container}>
+      <HeaderArticle />
+      <Catalog />
+      <Article />
+      <RecomendedProducts />
+      <Team teamPhotos={teamPhotos} />
+      <Faq faqList={faqList} />
+    </main>
   );
 };

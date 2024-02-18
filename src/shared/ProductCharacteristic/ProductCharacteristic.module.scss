@@ -1,0 +1,18 @@
+@import "../../app/variables/variables.module";
+
+.characteristic {
+  display: flex;
+  font-family: $semiBold-font;
+  font-size: 16px;
+  gap: 0 10px;
+  color: $primary-text-color;
+
+  & p {
+    margin: 0;
+  }
+
+  .characteristicName {
+    color: $characteristic-text-color;
+    
+  }
+}

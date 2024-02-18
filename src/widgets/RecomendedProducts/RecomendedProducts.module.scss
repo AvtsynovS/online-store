@@ -42,8 +42,23 @@
         .productsWrapper {
           display: flex;
           flex-wrap: wrap;
-          margin: 3px 0 30px 0;
-          gap: 10px 70px;
+          gap: 18px 12px;
+          margin: 25px 0 55px 0;
+
+          .categoriesWrapper {
+            font-size: 16px;
+            font-family: $semiBold-font;
+            margin-right: 150px;
+            &:nth-child(4n+4) {
+              margin-right: 0;
+            }
+
+            .checkbox {
+              width: 24px;
+              height: 24px;
+              margin-right: 10px;
+            }
+          }
         }
       }
     }

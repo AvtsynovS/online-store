@@ -31,10 +31,12 @@ export const Filter = ({ filterItems }: IFilter) => {
             <Button
               type="secondary"
               title="Apply"
+              handlerClick={() => {}}
             />
             <Button
               type="ghost"
               title="Reset"
+              handlerClick={() => {}}
             />
           </div>
         </form>

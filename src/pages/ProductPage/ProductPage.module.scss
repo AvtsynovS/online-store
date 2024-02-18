@@ -1,0 +1,53 @@
+@import "../../app/variables/variables.module";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 130px;
+
+  .title {
+    font-family: $semiBold-font;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    margin-bottom: 190px;
+
+    .galery {
+      display: flex;
+      flex-direction: column;
+      gap: 20px 0;
+      margin-right: 42px;
+      
+      .miniPhotos{
+        display: flex;
+        gap: 0 20px;
+        .miniPhoto {
+          max-width: 70px;
+          min-height: 75px;
+        }
+      }
+    }
+
+    .description {
+      width: 100%;
+
+      .descriptionTitle {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 50px;
+      }
+
+      .descriptionWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 100%;
+      }
+    }
+  }
+}
+  

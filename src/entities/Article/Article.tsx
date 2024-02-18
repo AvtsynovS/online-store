@@ -4,7 +4,10 @@ import styles from "./Article.module.scss";
 
 export const Article = () => {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      id="About us"
+    >
       <img
         src={bgPattern}
         alt="bgPattern"
