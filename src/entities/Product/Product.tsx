@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./Product.module.scss";
 
 interface IProduct {
+  id: number;
   title: string;
   img?: string;
   price?: number;
@@ -10,6 +11,7 @@ interface IProduct {
 }
 
 export const Product = ({
+  id,
   title,
   checkbox,
   price,
@@ -18,9 +20,8 @@ export const Product = ({
 }: IProduct) => {
   const classNames = require("classnames");
 
-  // TODO Вместо 1 передать id продукта
   return (
-    <NavLink to="/1">
+    <NavLink to={`/${id}`}>
       <div className={styles.container}>
         {img && (
           <img

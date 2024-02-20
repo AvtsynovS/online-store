@@ -1,10 +1,11 @@
+import { useCategoriesQuery } from "../../app";
 import { Button } from "../../shared";
 import styles from "./RecomendedProducts.module.scss";
 
-const categories = Array(22).fill("sneakers");
-
-// TODO Посмотреть отображение после запроса
+// TODO Переделать верстку
 export const RecomendedProducts = () => {
+  const { isError, data: categories } = useCategoriesQuery();
+
   return (
     <div
       className={styles.container}
@@ -23,24 +24,26 @@ export const RecomendedProducts = () => {
           <p className={styles.question}>
             What type of product are you considering?
           </p>
+          {isError && <div>Somting went wrong...</div>}
           <div className={styles.productsWrapper}>
-            {categories.map((category) => {
-              return (
-                <div className={styles.categoriesWrapper}>
-                  <input
-                    type="checkbox"
-                    name="titleProduct"
-                    className={styles.checkbox}
-                  />
-                  <label
-                    className={styles.label}
-                    htmlFor="titleProduct"
-                  >
-                    {category}
-                  </label>
-                </div>
-              );
-            })}
+            {categories &&
+              categories.map((category) => {
+                return (
+                  <div className={styles.categoriesWrapper}>
+                    <input
+                      type="checkbox"
+                      name="titleProduct"
+                      className={styles.checkbox}
+                    />
+                    <label
+                      className={styles.label}
+                      htmlFor="titleProduct"
+                    >
+                      {category}
+                    </label>
+                  </div>
+                );
+              })}
           </div>
         </div>
         <div className={styles.pagination}>

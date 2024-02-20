@@ -6,12 +6,8 @@
     flex-direction: column;
 
     .productImg {
-      max-width: 280px;
-
-      &.widthProduct {
-        width: 375px;
-        max-width: none;
-      }
+      width: 220px;
+      height: 195px;
     }
 
     .title{
