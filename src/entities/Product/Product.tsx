@@ -1,38 +1,58 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Product.module.scss";
 
 interface IProduct {
+  id: number;
   title: string;
+  img?: string;
   price?: number;
   checkbox?: boolean;
-  img: string;
+  isProductPage?: boolean;
 }
 
-export const Product = ({ title, checkbox, price, img }: IProduct) => {
+export const Product = ({
+  id,
+  title,
+  checkbox,
+  price,
+  img,
+  isProductPage,
+}: IProduct) => {
+  const classNames = require("classnames");
+
   return (
-    <div className={styles.container}>
-      <img
-        src={img}
-        alt="product"
-        className={styles.productImg}
-      />
-      {checkbox && (
-        <div className={styles.checkboxWrapper}>
-          <input
-            type="checkbox"
-            id="titleProduct"
-            name="titleProduct"
-            className={styles.checkbox}
+    <NavLink to={`/${id}`}>
+      <div className={styles.container}>
+        {img && (
+          <img
+            src={img}
+            alt="product"
+            className={classNames(
+              styles.productImg,
+              isProductPage && styles.widthProduct
+            )}
           />
-          <label
-            className={styles.title}
-            htmlFor="titleProduct"
-          >
-            {title}
-          </label>
-        </div>
-      )}
-      {!checkbox && <p className={styles.title}>{title}</p>}
-      {price && <p className={styles.price}>{price} $ </p>}
-    </div>
+        )}
+
+        {checkbox && (
+          <div className={styles.checkboxWrapper}>
+            <input
+              type="checkbox"
+              id="titleProduct"
+              name="titleProduct"
+              className={styles.checkbox}
+            />
+            <label
+              className={styles.title}
+              htmlFor="titleProduct"
+            >
+              {title}
+            </label>
+          </div>
+        )}
+        {!checkbox && <p className={styles.title}>{title}</p>}
+        {price && <p className={styles.price}>{price} $ </p>}
+      </div>
+    </NavLink>
   );
 };

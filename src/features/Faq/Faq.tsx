@@ -16,7 +16,10 @@ export const Faq = ({ faqList }: IFaq) => {
   const [openAnswer, setOpenAnswer] = useState<number | null>(null);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      id="FAQ"
+    >
       <h4 className={styles.title}>FAQ</h4>
       <ul className={styles.accordion}>
         {faqList.map((item) => {

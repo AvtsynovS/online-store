@@ -1,48 +1,66 @@
-import { useState } from "react";
-import basket from "../../assets/icons/basket.svg";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
+import { Button } from "../../shared";
 
 interface IHeader {
-  menuItems: string[];
-  productsCount?: number;
+  menuItems?: string[];
+  brand: string;
 }
 
-export const Header = ({ menuItems, productsCount }: IHeader) => {
-  // TODO Если продукт есть в карзине - показать индикатор
-  const [hasProducts, setHasProducts] = useState(false);
-  productsCount = 1;
+export const Header = ({ menuItems, brand }: IHeader) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const classNames = require("classnames");
+
   return (
     <>
-      <header className={styles.container}>
-        <div className={styles.menuWrapper}>
-          <div className={styles.brand}>Goods4you</div>
-          <ul className={styles.menu}>
-            {menuItems.map((item, index) => {
-              return (
-                <li
-                  className={styles.menuItem}
-                  key={index}
-                >
-                  {item}
-                </li>
-              );
-            })}
-          </ul>
-          <div className={styles.wrapper}>
-            <div className={styles.cart}>Cart</div>
-            {/* TODO добавить обработку клика и переход в карзину */}
-            <div className={styles.basket}>
-              <img
-                src={basket}
-                className="basket"
-                alt="basket"
-              />
-              {productsCount && (
-                <div className={styles.productsCount}>{productsCount}</div>
-              )}
-            </div>
+      <header
+        className={classNames(
+          styles.container,
+          location.pathname !== "/" && styles.headerPadding
+        )}
+      >
+        <div className={styles.brand}>{brand}</div>
+        {location.pathname === "/" && (
+          <div className={styles.menuWrapper}>
+            {menuItems && (
+              <ul className={styles.menu}>
+                {menuItems &&
+                  menuItems.map((item, index) => {
+                    return (
+                      <li
+                        className={styles.menuItem}
+                        key={index}
+                      >
+                        {item === "For staff" ? (
+                          <NavLink
+                            to={`all-products`}
+                            className={({ isActive, isPending }) =>
+                              isActive ? "active" : isPending ? "pending" : ""
+                            }
+                          >
+                            {item}
+                          </NavLink>
+                        ) : (
+                          <a href={`#${item}`}>{item}</a>
+                        )}
+                      </li>
+                    );
+                  })}
+              </ul>
+            )}
           </div>
-        </div>
+        )}
+
+        {location.pathname !== "/" && (
+          <Button
+            type="ghost"
+            title="Back to site"
+            isWhite
+            handlerClick={() => navigate("/")}
+          />
+        )}
       </header>
     </>
   );

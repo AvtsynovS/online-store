@@ -1,0 +1,8 @@
+@import "../../app/variables/variables.module";
+
+.title {
+    font-family: $bold-font;
+    font-size: 30px;
+    color: $primary-text-color;
+    margin: 50px 0;
+}

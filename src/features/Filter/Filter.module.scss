@@ -8,9 +8,8 @@
     padding: 10px 20px;
     box-sizing: border-box;
     max-width: 280px;
-    max-height: 535px;
    
-    .question {
+    .categories {
       font-family: $semiBold-font;
       font-size: 24px;
       max-width: 160px;
@@ -35,14 +34,19 @@
     }
   
     .filterItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: $semiBold-font;
       font-size: 16px;
       box-sizing: border-box;
       text-align: center;
       list-style-type: none;
-      padding: 22px 5px 10px;
+      padding: 10px;
       border: 0.29px solid $primary-border-color;
-      min-width: 120px;
+      width: 120px;
+      height: 70px;
+      cursor: pointer;
     }
 
     .buttonWrapper {

@@ -41,6 +41,13 @@
           &:nth-child(6) {
             margin-top: -100px;
           }
+
+          &:hover {
+            transform: scale(1.2);
+            transition-duration: 0.7s;
+            transition-property: transform;
+            filter: brightness(60%);
+          }
         }
       }
     }

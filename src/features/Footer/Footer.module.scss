@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     color: $white-text-color;
-    padding: 15px 130px 30px 130px;
+    padding: 18px 130px 30px 130px;
     background-color: $secondary-background;
   }
   
@@ -18,10 +18,19 @@
     font-family: $semiBold-font;
     font-size: 14px;
     display: flex;
-    justify-content: space-between;
-    min-width: 654px;
+    justify-content: center;
   }
 
   .menuItem {
     list-style-type:  none;
+    margin-right: 36px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  .menuItem > a {
+    color: white;
+    text-decoration: none;
   }

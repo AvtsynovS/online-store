@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import bgPattern from "../../assets/bg-pattern-2.svg";
 import styles from "./Team.module.scss";
 
@@ -8,7 +7,10 @@ interface ITeam {
 
 export const Team = ({ teamPhotos }: ITeam) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      id="Our team"
+    >
       <div className={styles.wrapper}>
         <h4 className={styles.title}>Our team</h4>
         <div className={styles.content}>

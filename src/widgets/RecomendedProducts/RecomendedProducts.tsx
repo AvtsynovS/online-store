@@ -1,19 +1,16 @@
-import product from "../../assets/photos/product-2.jpg";
-import { Product } from "../../entities";
+import { useCategoriesQuery } from "../../app";
 import { Button } from "../../shared";
 import styles from "./RecomendedProducts.module.scss";
 
-const products = Array(6).fill(
-  <Product
-    title="sneakers"
-    img={product}
-    checkbox={true}
-  />
-);
-
+// TODO Переделать верстку
 export const RecomendedProducts = () => {
+  const { isError, data: categories } = useCategoriesQuery();
+
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      id="Product selection"
+    >
       <div className={styles.wrapperContent}>
         <h4 className={styles.title}>
           We will select the perfect product for you
@@ -27,18 +24,35 @@ export const RecomendedProducts = () => {
           <p className={styles.question}>
             What type of product are you considering?
           </p>
+          {isError && <div>Somting went wrong...</div>}
           <div className={styles.productsWrapper}>
-            {products.map((product) => {
-              return product;
-            })}
+            {categories &&
+              categories.map((category) => {
+                return (
+                  <div className={styles.categoriesWrapper}>
+                    <input
+                      type="checkbox"
+                      name="titleProduct"
+                      className={styles.checkbox}
+                    />
+                    <label
+                      className={styles.label}
+                      htmlFor="titleProduct"
+                    >
+                      {category}
+                    </label>
+                  </div>
+                );
+              })}
           </div>
         </div>
         <div className={styles.pagination}>
-          <div>1 of 3</div>
+          <div>1 of 2</div>
           <Button
             title="Next step"
             type="ghost"
             isBorder
+            handlerClick={() => {}}
           />
         </div>
       </div>

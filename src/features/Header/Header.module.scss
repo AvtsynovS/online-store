@@ -2,33 +2,47 @@
 
 
 .container {
-    color: $white-text-color;
-    padding: 14px 103px 65px 130px;
-    background-color: $primary-background;
+  display: flex;
+  justify-content: space-between;
+  color: $white-text-color;
+  padding: 18px 130px 0;
+  background-color: $primary-background;
+
+  &.headerPadding {
+    padding: 25px 130px;
+  }
+
+  .brand {
+    font-family: $bold-font;
+    font-size: 30px;
+  }
 
     .menuWrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
       box-sizing: border-box;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-
-      .brand {
-        font-family: $bold-font;
-        font-size: 30px;
-      }
 
       .menu {
         font-family: $semiBold-font;
         font-size: 14px;
         display: flex;
         justify-content: center;
-        margin-left: 210px;
+        margin: 0 0 0 210px;
         padding: 0;
         
         .menuItem {
           list-style-type:  none;
           margin-right: 36px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        .menuItem > a {
+          color: white;
+          text-decoration: none;
         }
       }
 

@@ -5,6 +5,7 @@ import styles from "./HeaderArticle.module.scss";
 export const HeaderArticle = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.line}></div>
       <div className={styles.article}>
         <p className={styles.title}>
           Any products from famous brands with worldwide delivery
@@ -22,6 +23,7 @@ export const HeaderArticle = () => {
         <Button
           title="Go to shopping"
           type="accent"
+          handlerClick={() => {}}
         />
       </div>
     </div>
