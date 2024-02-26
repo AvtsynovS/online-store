@@ -40,7 +40,7 @@ export const Filter = () => {
               return (
                 <li
                   className={styles.filterItem}
-                  key={index}
+                  key={item + index}
                   onClick={() => setCategoryFilter(item)}
                 >
                   {item}

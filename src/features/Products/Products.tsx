@@ -30,19 +30,24 @@ export const Products = () => {
 
   return (
     <div className={styles.container}>
-      {isLoading && <div>Loading...</div>}
-      {isError && <div>Somting went wrong...</div>}
-      {products &&
-        products.map((product) => {
-          return (
-            <Product
-              id={product.id}
-              title={product.title}
-              img={product.images[0]}
-              price={product.price}
-            />
-          );
-        })}
+      <div className={styles.productsWrapper}>
+        {isLoading && <div>Loading...</div>}
+        {isError && <div>Somting went wrong...</div>}
+        {products &&
+          products.map((product) => {
+            return (
+              <div className={styles.productWrapper}>
+                <Product
+                  key={product.id}
+                  id={product.id}
+                  title={product.title}
+                  img={product.images[0]}
+                  price={product.price}
+                />
+              </div>
+            );
+          })}
+      </div>
       {visibleButton && (
         <div className={styles.buttonWrapper}>
           <Button

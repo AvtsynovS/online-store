@@ -1,15 +1,18 @@
 @import "../../app/variables/variables.module";
 
-
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .productsWrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 10px 20px;
-
-    .buttonWrapper {
-      margin-top: 20px;
-      margin-right: 10px;
-    }
   }
-  
+
+  .buttonWrapper {
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+}

@@ -21,7 +21,10 @@ export const Product = ({
   const classNames = require("classnames");
 
   return (
-    <NavLink to={`/${id}`}>
+    <NavLink
+      to={`/${id}`}
+      className={styles.link}
+    >
       <div className={styles.container}>
         {img && (
           <img
@@ -29,7 +32,7 @@ export const Product = ({
             alt="product"
             className={classNames(
               styles.productImg,
-              isProductPage && styles.widthProduct
+              isProductPage && styles.widthProduct,
             )}
           />
         )}
@@ -50,8 +53,10 @@ export const Product = ({
             </label>
           </div>
         )}
-        {!checkbox && <p className={styles.title}>{title}</p>}
-        {price && <p className={styles.price}>{price} $ </p>}
+        <div className={styles.productInfo}>
+          {title}
+          {price && <p className={styles.price}>{price} $ </p>}
+        </div>
       </div>
     </NavLink>
   );

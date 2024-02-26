@@ -25,6 +25,7 @@ export const AccordionItem = ({
     <li
       className={styles.accordionItem}
       key={question.id}
+      onClick={() => handlerClick()}
     >
       <div className={styles.faqQuestion}>
         <div>{question.question}</div>

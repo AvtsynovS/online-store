@@ -14,6 +14,7 @@ export {
   useProductQuery,
   useLazyProductQuery,
   useLazyGetProductsOfCategoryQuery,
+  useUpdateProductMutation,
 } from "./redux";
 export type { RootState, AppDispatch } from "./redux";
 export type { IProductsResponse, IProduct } from "./types";
