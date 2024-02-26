@@ -14,9 +14,10 @@ export const Team = ({ teamPhotos }: ITeam) => {
       <div className={styles.wrapper}>
         <h4 className={styles.title}>Our team</h4>
         <div className={styles.content}>
-          {teamPhotos.map((photo) => {
+          {teamPhotos.map((photo, i) => {
             return (
               <img
+                key={photo + i}
                 src={photo}
                 alt="member comand"
                 className={styles.teamPhoto}

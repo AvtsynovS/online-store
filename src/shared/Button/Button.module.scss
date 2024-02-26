@@ -1,42 +1,48 @@
 @import "../../app/variables/variables.module";
 
 .container {
-    display: flex;
+  display: flex;
 
-    .button {
-        font-family: $regular-font;
-        font-size: 16px;
-        color: $white-text-color;
-        border-radius: 4px;
-        border: none;
-        padding: 22px 48px;
-        cursor: pointer;
-        &.accent {
-            background-color: $accent-button-color;
-            margin-left: 12px;
-        }
-        
-        &.secondary {
-            width: 100%;
-            background-color: $secondary-button-color;
-        }
-        
-        &.ghost {
-            width: 100%;
-            color: $third-text-color;
-            background-color: transparent;
-            &.withBorder {
-                border: 1px solid #444B58;
-                padding: 13px 42px;
-            }
-            &.white {
-                font-family: $semiBold-font;
-                font-size: 14px;
-                color: $white-text-color;
-                padding: 0;
-            }
-        }
+  .button {
+    font-family: $regular-font;
+    font-size: 16px;
+    color: $white-text-color;
+    border-radius: 4px;
+    border: none;
+    padding: 22px 48px;
+    width: 100%;
+    cursor: pointer;
+    &.accent {
+      background-color: $accent-button-color;
     }
+
+    &.secondary {
+      background-color: $secondary-button-color;
+    }
+
+    &.ghost {
+      color: $third-text-color;
+      background-color: transparent;
+
+      &.withBorder {
+        border: 1px solid #444b58;
+        padding: 13px 42px;
+      }
+
+      &.white {
+        font-family: $semiBold-font;
+        font-size: 14px;
+        color: $white-text-color;
+        padding: 0;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &:hover {
+    filter: brightness(80%);
+  }
 }
-
-

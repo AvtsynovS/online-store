@@ -27,9 +27,12 @@ export const RecomendedProducts = () => {
           {isError && <div>Somting went wrong...</div>}
           <div className={styles.productsWrapper}>
             {categories &&
-              categories.map((category) => {
+              categories.map((category, i) => {
                 return (
-                  <div className={styles.categoriesWrapper}>
+                  <div
+                    className={styles.categoriesWrapper}
+                    key={category + i}
+                  >
                     <input
                       type="checkbox"
                       name="titleProduct"

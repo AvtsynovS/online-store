@@ -45,6 +45,31 @@ export const dummyjsonApi = createApi({
       transformResponse: (response: IProductsResponse<IProduct>) =>
         response.products,
     }),
+    updateProduct: build.mutation<IProduct, IProduct>({
+      query: ({
+        id,
+        price,
+        discountPercentage,
+        stock,
+        brand,
+        category,
+        description,
+      }: IProduct) => {
+        return {
+          method: "PUT",
+          url: `products/${id}`,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            price,
+            discountPercentage,
+            stock,
+            brand,
+            category,
+            description,
+          }),
+        };
+      },
+    }),
   }),
 });
 
@@ -56,4 +81,5 @@ export const {
   useProductQuery,
   useLazyProductQuery,
   useLazyGetProductsOfCategoryQuery,
+  useUpdateProductMutation,
 } = dummyjsonApi;

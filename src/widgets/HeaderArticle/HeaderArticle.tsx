@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../shared";
 
 import styles from "./HeaderArticle.module.scss";
 
 export const HeaderArticle = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.container}>
       <div className={styles.line}></div>
@@ -19,11 +21,11 @@ export const HeaderArticle = () => {
           and many other products at low prices
         </p>
       </div>
-      <div style={{ zIndex: 1 }}>
+      <div className={styles.buttonWrapper}>
         <Button
           title="Go to shopping"
           type="accent"
-          handlerClick={() => {}}
+          handlerClick={() => navigate(`all-products`)}
         />
       </div>
     </div>

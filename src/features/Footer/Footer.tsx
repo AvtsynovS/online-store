@@ -18,7 +18,7 @@ export const Footer = ({ brand, menuItems }: IFooter) => {
               return (
                 <li
                   className={styles.menuItem}
-                  key={index}
+                  key={item + index}
                 >
                   <a href={`#${item}`}>{item}</a>
                 </li>

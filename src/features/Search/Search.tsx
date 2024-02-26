@@ -19,13 +19,11 @@ export const Search = () => {
     if (event.code === "Enter") {
       fetchSearch(search);
       setSearch("");
-      console.log(`запрос отправлен`);
     }
   };
 
   useEffect(() => {
     fetchSearch(search);
-    console.log(`debounced`);
   }, [debounced]);
 
   useEffect(() => {

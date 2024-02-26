@@ -1,40 +1,51 @@
 @import "../../app/variables/variables.module";
 
+.link {
+  text-decoration: none;
+}
 
 .container {
+  display: flex;
+  flex-direction: column;
+
+  .productImg {
+    width: 280px;
+    height: 195px;
+  }
+
+  .title {
+    font-family: $semiBold-font;
+    font-size: 16px;
+    color: $primary-text-color;
+    margin: 10px 0 3px;
+  }
+
+  .price {
+    font-family: $regular-font;
+    font-size: 20px;
+    color: $primary-text-color;
+    margin: 0;
+  }
+
+  .checkboxWrapper {
     display: flex;
-    flex-direction: column;
+    align-items: baseline;
 
-    .productImg {
-      width: 220px;
-      height: 195px;
-    }
-
-    .title{
-      font-family: $semiBold-font;
-      font-size: 16px;
-      color: $primary-text-color;
-      margin: 10px 0 3px;
-    }
-
-    .price {
-      font-family: $regular-font;
-      font-size: 20px;
-      color: $primary-text-color;
-      margin: 0;
-    }
-
-    .checkboxWrapper {
-      display: flex;
-      align-items: baseline;
-      
-      .checkbox {
-        margin: 10px 10px 0 0; 
-        min-width: 24px;
-        min-height: 24px;
-        border: 1px solid $primary-border-color;
-        border-radius: 4px;
-      }
+    .checkbox {
+      margin: 10px 10px 0 0;
+      min-width: 24px;
+      min-height: 24px;
+      border: 1px solid $primary-border-color;
+      border-radius: 4px;
     }
   }
-  
+
+  .productInfo {
+    font-family: $semiBold-font;
+    font-size: 16px;
+    color: $primary-text-color;
+    width: 100%;
+    max-width: 195px;
+    margin: 10px 0 3px;
+  }
+}

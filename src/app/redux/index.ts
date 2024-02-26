@@ -17,4 +17,5 @@ export {
   useProductQuery,
   useLazyProductQuery,
   useLazyGetProductsOfCategoryQuery,
+  useUpdateProductMutation,
 } from "./api/dummyjson.api";

@@ -21,8 +21,8 @@
       flex-direction: column;
       gap: 20px 0;
       margin-right: 42px;
-      
-      .miniPhotos{
+
+      .miniPhotos {
         display: flex;
         gap: 0 20px;
         .miniPhoto {
@@ -33,6 +33,8 @@
     }
 
     .description {
+      display: flex;
+      flex-direction: column;
       width: 100%;
 
       .descriptionTitle {
@@ -44,10 +46,14 @@
 
       .descriptionWrapper {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 24px 100%;
+        margin-bottom: 65px;
+      }
+
+      .buttonWrapper {
+        max-width: 300px;
       }
     }
   }
 }
-  

@@ -18,7 +18,7 @@ export const Header = ({ menuItems, brand }: IHeader) => {
       <header
         className={classNames(
           styles.container,
-          location.pathname !== "/" && styles.headerPadding
+          location.pathname !== "/" && styles.headerPadding,
         )}
       >
         <div className={styles.brand}>{brand}</div>
@@ -31,7 +31,7 @@ export const Header = ({ menuItems, brand }: IHeader) => {
                     return (
                       <li
                         className={styles.menuItem}
-                        key={index}
+                        key={item + index}
                       >
                         {item === "For staff" ? (
                           <NavLink
